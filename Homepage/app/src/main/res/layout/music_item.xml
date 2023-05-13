@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="70dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center|top"
+    app:shapeAppearanceOverlay="@style/radiusImage"
+
+    android:background="@drawable/shape">
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/ivMusic"
+        android:src="@drawable/okok"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtName"
+        android:text="song name"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/purple_700"
+        android:layout_marginLeft="150px"/>
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginLeft="580px"
+        android:src="@drawable/icstart"/>
+
+    <ImageView
+        android:id="@+id/ivStop"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="650px"
+        android:src="@drawable/stopp"/>
+
+</androidx.cardview.widget.CardView>

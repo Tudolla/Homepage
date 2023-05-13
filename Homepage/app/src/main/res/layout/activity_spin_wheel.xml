@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/tomzerry"
+    android:layout_height="match_parent"
+    tools:context=".SpinWheel">
+
+    <TextView
+        android:id="@+id/spin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spin to get Money Free"
+        android:gravity="center"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        />
+    <ImageView
+        android:id="@+id/wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/spinok"/>
+    <Button
+        android:id="@+id/btnSpin"
+        android:background="@drawable/layout_ok"
+        android:backgroundTint="@color/music"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="270dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="140dp"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:text="Spin"/>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/music"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Earning: "
+            android:textStyle="bold"
+            android:textSize="33dp"/>
+        <TextView
+            android:id="@+id/earning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+        <Button
+            android:id="@+id/addVourcher"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="ADD"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            android:backgroundTint="@color/purple_200"
+            android:layout_marginLeft="90dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

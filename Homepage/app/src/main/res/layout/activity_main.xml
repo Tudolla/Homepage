@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+
+    <!--        android:layout_below="@+id/toolbar"-->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#988364"
+                app:menu="@menu/menu"
+                app:title="Diamond Luxury"
+                app:titleTextColor="@android:color/white" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="7dp"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:src="@drawable/wea"
+
+                app:shapeAppearanceOverlay="@style/radiusImage" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's temperature : " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27 C" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <!--        </RelativeLayout>-->
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            app:headerLayout="@layout/header"
+            app:itemHorizontalPadding="10dp"
+            app:itemIconTint="@drawable/navi_bg"
+            app:itemTextAppearance="@style/TextViewStyle"
+            app:itemTextColor="@drawable/navi_bg"
+            app:menu="@menu/item" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/floatingLucky"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:background="@color/floatSon"
+        android:src="@drawable/base_send"
+        android:visibility="gone"
+        app:fabSize="mini">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingLucky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/floatingCart"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:background="@color/floatSon"
+        android:src="@drawable/base_lucky"
+        android:visibility="gone"
+        app:fabSize="mini">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/floatingFavorite"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:background="@color/floatSon"
+        android:src="@drawable/base_cart"
+        android:visibility="gone"
+        app:fabSize="mini">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/floatingHome"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:background="@color/floatSon"
+        android:src="@drawable/base_favorite"
+        android:visibility="gone"
+        app:fabSize="mini">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/floatingBtn"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:background="@color/floatSon"
+        android:src="@drawable/base_home"
+        android:visibility="gone"
+        app:fabSize="mini">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15px"
+        android:layout_marginBottom="15px"
+        android:backgroundTint="@color/floatingBtn"
+        android:src="@drawable/base_app"
+        android:tint="@color/white">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+</RelativeLayout>
